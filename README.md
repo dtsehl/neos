@@ -23,6 +23,8 @@ Please follow these instructions for further enlightenment.
 With your partner look through `start.rb` and `near_earth_objects.rb`
 
 - Discuss is this 'good' or 'bad' code? Why?
+  - It’s functional, but could definitely use with some more organization. It uses a lot of variables to keep track of things, when methods could be used instead. It also does a lot of formatting and I wonder if that could be changed by either 1) using some sort of gem or 2) making this a Rails application to have a better user experience.
+
 
 ---
 
@@ -31,10 +33,17 @@ With your partner look through `start.rb` and `near_earth_objects.rb`
 With your Partner, identify the different responsibilities that exist in each file.
 
 - Does this adhere to SRP?
+  - Not really - they could use a third class called something like Formatting where all it does is handle all the formatting. And another one to Calculate, and another for User input, so the start.rb file would just be maybe running one line of code which cascades everything else to work.
+
 
 - How would you utilize encapsulation and abstraction to refactor this code?
+  - I would abstract out at least 2 other classes to make sure what each class does is very clear and direct. Those classes (and the class that already exists) would only have access to data of the classes they need to.
+
 
 - What tools/strategies could you utilize to make this code adhere to SRP?
+  - Create more classes
+  - Create more methods in those classes
+
 
 ---
 
